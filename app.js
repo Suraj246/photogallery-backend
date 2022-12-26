@@ -25,10 +25,10 @@ mongoose.connect(process.env.DATABASE)
 app.use(
     cors(
         {
-            // origin: ["http://localhost:3000"],
+            origin: ["https://photo-gallerly.onrender.com"],
             // methods: ["GET", "POST", "DELETE"],
             credentials: true,
-            origin: true,
+            // origin: true,
         }
     )
 );
