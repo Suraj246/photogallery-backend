@@ -10,7 +10,9 @@ const upload = multer({ dest: 'uploads/' })
 // const fileUpload = require("express-fileupload")
 // const path = require("path");
 const dotenv = require("dotenv");
+
 dotenv.config({ path: "./config.env" });
+const port = process.env.PORT || 4000
 
 const app = express()
 
@@ -102,7 +104,6 @@ app.post("/delete", async (req, res) => {
 
 
 
-const port = 4000
 app.listen(port, () => {
     console.log('server running', port)
 })
